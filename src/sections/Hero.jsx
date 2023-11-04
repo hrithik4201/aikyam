@@ -5,7 +5,7 @@ import heroBg from "../assets/images/hero-bg.jpg";
 
 const Hero = () => {
   return (
-    <section className="flex md:flex-row flex-col lg:pt-32 pt-16 gap-12">
+    <section className="flex md:flex-row flex-col md:pt-32 pt-28 gap-12">
       <div className="md:w-3/5 w-full">
         <h1 className="font-palanquin lg:text-[72px] lg:leading-[82px] font-bold lg:text-6xl text-4xl text-white ">
           Empowering Athletes to Reach Their Full Potential
