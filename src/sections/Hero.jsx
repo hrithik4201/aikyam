@@ -1,3 +1,5 @@
+import React from "react";
+import { Helmet } from "react-helmet";
 import Button from "../components/Button";
 import heroBg from "../assets/images/hero-bg.jpg";
 
@@ -9,7 +11,7 @@ const Hero = () => {
           Empowering Athletes to Reach Their Full Potential
         </h1>
         <p className="font-montserrat text-slate-gray lg:text-lg text-sm leading-8 mt-6 mb-10 lg:w-3/5 w-full">
-          Welcome to Aikyam Sports Science, a sports science fitness centre that
+          Welcome to AIKYAM Sports Science, a sports science fitness centre that
           combines cutting-edge technology with a passion for enhancing athlete
           performance, recovery, strength, nutrition, and psychology.
         </p>
@@ -20,6 +22,7 @@ const Hero = () => {
       <img
         className="rounded-lg md:hidden"
         src={heroBg}
+        loading="lazy"
         alt="hero"
         width={550}
       />

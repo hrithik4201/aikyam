@@ -6,11 +6,11 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
     <footer className=" bg-pale-red">
-      <div className="flex md:flex-row flex-col justify-between items-center text-black p-10">
+      <div className="flex md:flex-row flex-col justify-between md:items-baseline items-center text-black p-10">
         <div className="flex flex-col gap-6 flex-1">
           <div className="flex items-center">
-            <img src={logo} alt="" width={75} />
-            <img src={logo_text} alt="" width={100} />
+            <img src={logo} alt="AIKYAM Logo" width={75} />
+            <img src={logo_text} alt="AIKYAM Text Logo" width={100} />
           </div>
           <div className="font-palanquin text-base">
             AIKYAM Sports Science: Elevating sports tech to empower athletes.

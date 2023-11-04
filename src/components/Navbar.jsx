@@ -8,12 +8,21 @@ const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
 
+  const handleLinkClick = () => {
+    setActive("");
+    setToggle(false);
+  };
+
   return (
-    <header className="sticky w-full z-50">
+    <header className="fixed bg-white w-full z-50">
       <nav className="py-4 flex items-center justify-between sm:padding-x px-6">
         <a href="/" className="flex items-center">
-          <img src={logo} alt="logo" className="w-12 md:w-20 lg:w-16 " />
-          <img src={logo_text} alt="" className="w-20 md:w-32 lg:w-32" />
+          <img src={logo} alt="AIKYAM Logo" className="w-12 md:w-20 lg:w-16 " />
+          <img
+            src={logo_text}
+            alt="AIKYAM Text Logo"
+            className="w-20 md:w-32 lg:w-32"
+          />
         </a>
         <div className="flex items-center gap-8 mt-4 md:mt-0">
           <ul className="flex flex-col md:flex-row gap-8 max-lg:hidden">
@@ -22,13 +31,14 @@ const Navbar = () => {
                 <a
                   href={link.href}
                   className="hover:underline font-montserrat leading-normal text-lg text-slate-gray"
+                  onClick={() => handleLinkClick(link.label)}
                 >
                   {link.label}
                 </a>
               </li>
             ))}
           </ul>
-          <a className="hidden sm:block" href="tel:+918217496413">
+          <a className="hidden sm:block" href="tel:+91 70193 86664">
             <Button label="Join Now" iconURL={phone} />
           </a>
           <div className="hidden max-lg:block">
@@ -50,16 +60,15 @@ const Navbar = () => {
                 <li
                   key={nav.label}
                   className={`font-medium cursor-pointer text-[16px] mb-4 sm:mb-2 ${
-                    active === nav.label ? "text-white" : "text-dimWhite"
+                    index !== navLinks.length - 1 ? "" : "mb-0"
+                  } ${
+                    active === nav.label ? "text-primary" : "text-dimWhite"
                   } `}
-                  onClick={() => setActive(nav.label)}
+                  onClick={() => handleLinkClick()}
                 >
                   <a href={`${nav.href}`}>{nav.label}</a>
                 </li>
               ))}
-              <a className="sm:hidden block" href="tel:+918217496413">
-                <Button label="Join Now" iconURL={phone} />
-              </a>
             </ul>
           </div>
         </div>

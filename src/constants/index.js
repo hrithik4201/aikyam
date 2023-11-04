@@ -108,17 +108,17 @@ export const contactData = [
   {
     image: contactHome,
     label: 'Our Location',
-    subtext: '99 S.t Jomblo Park Pekanbaru 28292. Indonesia',
+    subtext: 'Xtrons Sports, 2nd floor, General Thimmayya Road, Mysuru 570017',
   },
   {
     image: contactPhone,
     label: 'Phone Number',
-    subtext: '(+62)81 414 257 9980',
+    subtext: '(+91) 70193 86664',
   },
   {
     image: contactEmail,
     label: 'Email Address',
-    subtext: 'info@yourdomain.com',
+    subtext: 'aikyamsports@gmail.com',
   }
 ]
 

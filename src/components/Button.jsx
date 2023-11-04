@@ -15,12 +15,12 @@ const Button = ({
             : "bg-primary text-white border-coral-red"
         } rounded-full ${fullWidth && "w-full"}`}
     >
-      {label}
+      {label && <span>{label}</span>}
 
       {iconURL && (
         <img
           src={iconURL}
-          alt="arrow right icon"
+          alt="phone icon"
           className="ml-2 rounded-full w-5 h-5"
         />
       )}
